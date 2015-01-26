@@ -1,0 +1,39 @@
+
+<html>
+<head>
+	<title>JQuery Uploader</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<script src="http://malsup.github.com/jquery.form.js"></script>
+	<script src="dynamic.file.creator.js"></script>
+</head>
+
+<body>
+
+<form method="post" enctype="multipart/form-data" id="form1" action="upload.php">
+	<div>Please select file(s)</div>
+
+	<div class="kdm_dynamic_file_container"></div>
+
+	<div>
+		<input type="submit" value="Send Files !" />
+	</div>
+</form>
+
+<script>
+
+$(document).ready(function() {
+	$('#form1').ajaxForm(function() {
+		alert("Your files sent!");
+	});
+
+	$('#form1').dynamicFileUpload();
+});
+
+</script>
+
+
+</body>
+
+</html>
