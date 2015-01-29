@@ -1,0 +1,78 @@
+
+.dfu_container {
+	width: 99%;
+}
+
+.dfu_dynamic_file_add_new_button {
+	border: 0px solid black;
+}
+
+.dfu_dynamic_file_upload {
+	position: absolute;
+	top: 0;
+	right: 0;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	font-size: 20px;
+	cursor: pointer;
+	opacity: 0;
+	filter: alpha(opacity=0);
+
+}
+
+.dfu_file_btn_container {
+	position: relative;
+	overflow: hidden;
+	margin: 0px 0px 10px 0px;
+	padding: 0px;
+	height: 24px;
+	display: block;
+	width: 100%;
+	border: 0px solid black;
+	background: #ddd;
+	color: black;
+	font-family: arial;
+	font-size: 14px;
+
+}
+
+.dfu_file_btn_container .dfu_input_file {
+	position: absolute;
+	top: 5px;
+	left: 0;
+	margin: 0;
+	padding: 0;
+	font-size: 20px;
+	cursor: pointer;
+	opacity: 0;
+	filter: alpha(opacity=0);
+	width: 100%;
+}
+
+.dfu_file_btn_container span {
+	position: absolute;
+	cursor: pointer;
+	top: 0;
+	left: 0;
+}
+
+
+.dfu_file_btn_container span .dfu_file_name {
+	cursor: default;
+	position: relative;
+	margin-right: 10px;
+}
+
+.dfu_file_btn_container span .dfu_delete_line {
+	cursor: pointer;
+	position: relative;
+	border: 1px solid red;
+	color: white;
+	background: #ff1111;
+}
+
+.dfu_file_btn_container .dfu_file_info {
+	border: 0px solid black;
+	cursor: pointer;
+}
