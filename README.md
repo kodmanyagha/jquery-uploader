@@ -1,5 +1,4 @@
-# jquery-uploader
-jQuery multiple file uploader plugin
+# JQuery Multiple File Uploader
 
 Simplest multiple file upload plugin in the omniverse :)
 
