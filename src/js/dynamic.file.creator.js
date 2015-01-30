@@ -7,7 +7,8 @@
 			auto_upload: false,
 			auto_upload_url: "",
 			file_types: "",
-			btn_title: "Click here for select file"
+			btn_title: "Click here for select file",
+			btn_delete_title: "X"
 		}, options );
 		
 		var file_container_str = '<div class="kdm_dynamic_file_container" id="dynamicFileUpload_file_container"></div>';
@@ -56,7 +57,7 @@
 			$file_info.css("display", "block");
 
 			var info_str = '<span class="dfu_file_name">'+ file_name +'</span>';
-			info_str += '<span class="dfu_delete_line">X</span>';
+			info_str += '<span class="dfu_delete_line">' + settings.btn_delete_title + '</span>';
 
 			$file_info.append( info_str );
 
