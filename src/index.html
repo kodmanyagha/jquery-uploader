@@ -41,7 +41,9 @@ $(document).ready(function() {
 		}
 	});
 
-	$('#dynamic_file_container').dynamicFileUpload();
+	$('#dynamic_file_container').dynamicFileUpload({
+		upload_limit: 4
+	});
 });
 
 </script>

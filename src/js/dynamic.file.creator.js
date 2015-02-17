@@ -8,7 +8,8 @@
 			auto_upload_url: "",
 			file_types: "",
 			btn_title: "Click here for select file",
-			btn_delete_title: "X"
+			btn_delete_title: "X",
+			upload_limit: -1
 		}, options );
 		
 		var file_container_str = '<div class="kdm_dynamic_file_container" id="dynamicFileUpload_file_container"></div>';
@@ -18,7 +19,10 @@
 		this.append( btn_add_new );
 		
 		$( "#dynamicFileUpload_add_new_btn" ).on( "click", function() {
-			addNewFileTag( settings );
+			if ( settings.upload_limit == -1 )
+				addNewFileTag( settings );
+			else if ( $( "#dynamicFileUpload_file_container" ).children().length < settings.upload_limit )
+				addNewFileTag( settings );
 			
 			$( "#dynamicFileUpload_file_container" ).last().click();
 		});
@@ -63,10 +67,13 @@
 
 			$(".dfu_file_btn_container span .dfu_delete_line").on("click", function(data) {
 				$( this ).parent().parent().remove();
+				$( "#dynamicFileUpload_add_new_btn" ).show();
 			});
-
-			//alert( file_info_id );
 		});
+
+		if ( $( "#dynamicFileUpload_file_container" ).children().length >= settings.upload_limit ) {
+			$( "#dynamicFileUpload_add_new_btn" ).hide();
+		}
 	}
 	
 }( jQuery ));
